@@ -1,0 +1,102 @@
+{
+  "projects": [
+    {
+      "name": "La Capsule",
+      "id": "lacapsule",
+      "link": "https://php.lmoraes.fr/lacapsule/",
+      "icon": "screen",
+      "descritpion": "Site de commerce de café personnalisés"
+    },
+    {
+      "name": "Quiz Millennials",
+      "id": "quiz_millennials",
+      "link": "https://php.lmoraes.fr/quiz-millennials/",
+      "icon": "joystick2 games",
+      "descritpion": "Blind test en ligne"
+    },
+    {
+      "name": "Booki",
+      "id": "booki",
+      "link": "https://lgmoraes.github.io/Booki/",
+      "icon": "screen",
+      "descritpion": "Site de reservation d'hébergement"
+    },
+    {
+      "name": "Kasa",
+      "id": "kasa",
+      "link": "https://php.lmoraes.fr/Kasa/",
+      "icon": "screen",
+      "descritpion": "Site de reservation d'hébergement"
+    },
+    {
+      "name": "Ohmyfood",
+      "id": "ohmyfood",
+      "link": "https://lgmoraes.github.io/ohmyfood/",
+      "icon": "screen",
+      "descritpion": ""
+    },
+    {
+      "name": "SportSee",
+      "id": "sportsee",
+      "link": "https://php.lmoraes.fr/SportSee/1",
+      "icon": "screen",
+      "descritpion": ""
+    },
+    {
+      "name": "Font Webatlas",
+      "id": "font_webatlas",
+      "link": "https://php.lmoraes.fr/font_webatlas/",
+      "icon": "screen",
+      "descritpion": "Module d'icones"
+    },
+    {
+      "name": "DocVoc",
+      "id": "docvoc",
+      "link": "https://php.lmoraes.fr/docvoc/",
+      "icon": "application",
+      "descritpion": "Outil de création de module animé en ligne"
+    }
+  ],
+  "moreProjects": [
+    {
+      "name": "Autablo",
+      "id": "autablo",
+      "link": "http://www.autablo.gretaformation.com/",
+      "icon": "application",
+      "descritpion": "Plateforme de formation en ligne. Code SuuEI"
+    },
+    {
+      "name": "Video Clic",
+      "id": "video_clic",
+      "link": "https://www.lmoraes.fr/VideoClic/",
+      "icon": "application",
+      "descritpion": "Outil de création de video en ligne"
+    },
+    {
+      "name": "PsyLilleSophro",
+      "id": "psylillesophro",
+      "link": "https://psylillesophro.fr/",
+      "icon": "screen",
+      "descritpion": "Site web de Nora Ouali, psychologue à Lille"
+    },
+    {
+      "name": "Fisheye",
+      "id": "fisheye",
+      "link": "https://www.lmoraes.fr/Fisheye/",
+      "icon": "screen",
+      "descritpion": ""
+    },
+    {
+      "name": "GameOn",
+      "id": "gameon",
+      "link": "https://lgmoraes.github.io/GameOn/",
+      "icon": "screen",
+      "descritpion": ""
+    }
+  ],
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/lgmoraes",
+    "npm": "https://www.npmjs.com/~lgmoraes",
+    "github": "https://github.com/lgmoraes"
+  }
+}
