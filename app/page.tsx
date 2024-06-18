@@ -1,4 +1,5 @@
 import ScreenGrid from '@/components/screenGrid';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
 import portfolioData from '../data/portfolio.json';
 
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <ScreenGrid data={portfolioData} />
+      <SpeedInsights />
     </main>
   );
 }
