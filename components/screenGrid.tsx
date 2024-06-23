@@ -1,31 +1,21 @@
-'use client';
-
-import { CSSProperties } from 'react';
+import Image from 'next/image';
 import './screenGrid.css';
-
-const styles: { background: CSSProperties } = {
-  background: {
-    background: 'rgba(0, 0, 0, 0.5) center no-repeat',
-    backgroundSize: 'cover',
-    boxShadow: 'rgba(0, 0, 0, 0.2) 5px 3px 20px 8px inset',
-  },
-};
 
 function ScreenGrid({ data }: { data: Portfolio }) {
   return (
-    <div className="screenGrid flex h-screen w-full flex-wrap justify-center overflow-hidden p-0">
+    <div className="screenGrid flex w-full grow flex-wrap justify-center overflow-hidden p-0">
       {data.projects.map((p) => (
         <a
-          className={`w-1/2 relative shrink-0 overflow-hidden`}
+          className={`group relative flex w-1/2 shrink-0 overflow-hidden`}
           key={p.id}
           href={p.link}
         >
-          <div
-            className="size-full shrink-0 transition duration-500 hover:scale-110"
-            style={{
-              ...styles.background,
-              backgroundImage: `url(./${p.id}.jpg);`,
-            }}
+          <Image
+            className="shrink-0 grow object-cover transition duration-500 group-hover:scale-110"
+            src={`/${p.id}.jpg`}
+            width={p.cover.width}
+            height={p.cover.height}
+            alt={`Couverture du projet ${p.name}`}
           />
         </a>
       ))}

@@ -1,6 +1,6 @@
 type Portfolio = {
   projects: Array<Project>;
-  moreProjects: Array<Project>;
+  moreProjects: Array<OtherProject>;
   social: {
     linkedin: string;
     npm: string;
@@ -13,5 +13,11 @@ type Project = {
   id: string;
   link: string;
   icon: string;
-  descritpion: string;
+  description: string;
+  cover: {
+    width: number;
+    height: number;
+  };
 };
+
+type OtherProject = Omit<Project, "cover">

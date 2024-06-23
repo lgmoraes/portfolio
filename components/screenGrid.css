@@ -1,3 +1,13 @@
+.screenGrid a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  box-shadow: inset 5px 3px 20px 8px rgba(0, 0, 0, 0.2);
+}
+
 @media (min-aspect-ratio: 16/9) {
   .screenGrid a {
     width: 25%;

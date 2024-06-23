@@ -5,56 +5,88 @@
       "id": "lacapsule",
       "link": "https://php.lmoraes.fr/lacapsule/",
       "icon": "screen",
-      "descritpion": "Site de commerce de café personnalisés"
+      "description": "Site de commerce de café personnalisés",
+      "cover": {
+        "width": 1210,
+        "height": 800
+      }
     },
     {
       "name": "Quiz Millennials",
       "id": "quiz_millennials",
       "link": "https://php.lmoraes.fr/quiz-millennials/",
       "icon": "joystick2 games",
-      "descritpion": "Blind test en ligne"
+      "description": "Blind test en ligne",
+      "cover": {
+        "width": 1210,
+        "height": 800
+      }
     },
     {
       "name": "Booki",
       "id": "booki",
       "link": "https://lgmoraes.github.io/Booki/",
       "icon": "screen",
-      "descritpion": "Site de reservation d'hébergement"
+      "description": "Site de reservation d'hébergement",
+      "cover": {
+        "width": 1222,
+        "height": 800
+      }
     },
     {
       "name": "Kasa",
       "id": "kasa",
       "link": "https://php.lmoraes.fr/Kasa/",
       "icon": "screen",
-      "descritpion": "Site de reservation d'hébergement"
+      "description": "Site de reservation d'hébergement",
+      "cover": {
+        "width": 1222,
+        "height": 800
+      }
     },
     {
       "name": "Ohmyfood",
       "id": "ohmyfood",
       "link": "https://lgmoraes.github.io/ohmyfood/",
       "icon": "screen",
-      "descritpion": ""
+      "description": "",
+      "cover": {
+        "width": 1222,
+        "height": 800
+      }
     },
     {
       "name": "SportSee",
       "id": "sportsee",
       "link": "https://php.lmoraes.fr/SportSee/1",
       "icon": "screen",
-      "descritpion": ""
+      "description": "",
+      "cover": {
+        "width": 1222,
+        "height": 800
+      }
     },
     {
       "name": "Font Webatlas",
       "id": "font_webatlas",
       "link": "https://php.lmoraes.fr/font_webatlas/",
       "icon": "screen",
-      "descritpion": "Module d'icones"
+      "description": "Module d'icones",
+      "cover": {
+        "width": 600,
+        "height": 338
+      }
     },
     {
       "name": "DocVoc",
       "id": "docvoc",
       "link": "https://php.lmoraes.fr/docvoc/",
       "icon": "application",
-      "descritpion": "Outil de création de module animé en ligne"
+      "description": "Outil de création de module animé en ligne",
+      "cover": {
+        "width": 1222,
+        "height": 800
+      }
     }
   ],
   "moreProjects": [
@@ -63,35 +95,55 @@
       "id": "autablo",
       "link": "http://www.autablo.gretaformation.com/",
       "icon": "application",
-      "descritpion": "Plateforme de formation en ligne. Code SuuEI"
+      "description": "Plateforme de formation en ligne. Code SuuEI",
+      "cover": {
+        "width": 1222,
+        "height": 800
+      }
     },
     {
       "name": "Video Clic",
       "id": "video_clic",
       "link": "https://www.lmoraes.fr/VideoClic/",
       "icon": "application",
-      "descritpion": "Outil de création de video en ligne"
+      "description": "Outil de création de video en ligne",
+      "cover": {
+        "width": 1222,
+        "height": 800
+      }
     },
     {
       "name": "PsyLilleSophro",
       "id": "psylillesophro",
       "link": "https://psylillesophro.fr/",
       "icon": "screen",
-      "descritpion": "Site web de Nora Ouali, psychologue à Lille"
+      "description": "Site web de Nora Ouali, psychologue à Lille",
+      "cover": {
+        "width": 1222,
+        "height": 800
+      }
     },
     {
       "name": "Fisheye",
       "id": "fisheye",
       "link": "https://www.lmoraes.fr/Fisheye/",
       "icon": "screen",
-      "descritpion": ""
+      "description": "",
+      "cover": {
+        "width": 1222,
+        "height": 800
+      }
     },
     {
       "name": "GameOn",
       "id": "gameon",
       "link": "https://lgmoraes.github.io/GameOn/",
       "icon": "screen",
-      "descritpion": ""
+      "description": "",
+      "cover": {
+        "width": 1222,
+        "height": 800
+      }
     }
   ],
   "social": {
