@@ -7,6 +7,9 @@ const nunito = Nunito({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   description: 'Portfolio de Louis Moraes, Developpeur web fullstack',
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({
