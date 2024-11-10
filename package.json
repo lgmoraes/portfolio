@@ -5,6 +5,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev --turbopack",
+    "generate-barrels": "barrelsby --delete --directory components",
     "lint": "next lint",
     "start": "next start"
   },
@@ -27,6 +28,7 @@
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
     "@vercel/style-guide": "^6.0.0",
+    "barrelsby": "^2.8.1",
     "eslint": "^8.57.1",
     "eslint-config-next": "15.0.2",
     "postcss": "^8.4.47",

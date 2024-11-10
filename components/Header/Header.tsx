@@ -1,7 +1,7 @@
+import { montserrat } from '@/app/fonts';
 import Link from 'next/link';
-import { montserrat } from '../app/fonts';
 
-function Header() {
+export const Header = () => {
   return (
     <div className="h-11 shrink-0">
       <header
@@ -13,6 +13,4 @@ function Header() {
       </header>
     </div>
   );
-}
-
-export default Header;
+};

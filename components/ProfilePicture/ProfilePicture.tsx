@@ -1,5 +1,4 @@
-
-export default function ProfilePicture({
+export const ProfilePicture = ({
   url,
   width,
   height,
@@ -7,7 +6,7 @@ export default function ProfilePicture({
   url: string;
   width: string;
   height: string;
-}) {
+}) => {
   return (
     <svg
       width={width}
@@ -61,4 +60,4 @@ export default function ProfilePicture({
       </defs>
     </svg>
   );
-}
+};

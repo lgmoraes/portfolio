@@ -1,9 +1,11 @@
 import Image from 'next/image';
-import './screenGrid.css';
+import styles from './ScreenGrid.module.css';
 
-function ScreenGrid({ data }: { data: Portfolio }) {
+export const ScreenGrid = ({ data }: { data: Portfolio }) => {
   return (
-    <div className="screenGrid flex w-full grow flex-wrap justify-center overflow-hidden p-0">
+    <div
+      className={`${styles.screenGrid} screenGrid flex w-full grow flex-wrap justify-center overflow-hidden p-0`}
+    >
       {data.projects.map((p) => (
         <a
           className={`group relative flex w-1/2 shrink-0 overflow-hidden`}
@@ -22,5 +24,3 @@ function ScreenGrid({ data }: { data: Portfolio }) {
     </div>
   );
 }
-
-export default ScreenGrid;

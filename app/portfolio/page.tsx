@@ -1,4 +1,4 @@
-import ScreenGrid from '@/components/screenGrid';
+import { ScreenGrid } from '@/components/';
 import portfolioData from '@/data/portfolio.json';
 import { Metadata } from 'next';
 
