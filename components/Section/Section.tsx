@@ -1,12 +1,9 @@
 import clsx from 'clsx';
 import { ElementType } from 'react';
 
-type AsElementProps<T extends ElementType> = {
-  as?: T;
-};
-
-type SectionProps<T extends ElementType = 'section'> = AsElementProps<T> & {
+type SectionProps<T extends ElementType = 'section'> = {
   children: React.ReactNode;
+  as?: T;
   fullWidth?: boolean;
   fullHeight?: boolean;
   className?: string;
@@ -14,12 +11,6 @@ type SectionProps<T extends ElementType = 'section'> = AsElementProps<T> & {
   id?: string;
   role?: string;
 };
-
-type ContainerProps = {
-  children: React.ReactNode;
-  className?: string;
-};
-
 
 export const Section = <T extends ElementType = 'section'>({
   children,
@@ -40,29 +31,15 @@ export const Section = <T extends ElementType = 'section'>({
       role={role}
       className={clsx(
         'relative w-full',
-        !fullWidth && [
-          'mx-auto',
-          'max-w-7xl',
-          'px-4 sm:px-6 lg:px-8',
-        ],
+        !fullWidth && ['mx-auto', 'max-w-7xl', 'px-4 sm:px-6 lg:px-8'],
         fullHeight && 'min-h-screen',
         className,
       )}
     >
-      <Container className={containerClassName}>{children}</Container>
+      {/* Inner container for content layout */}
+      <div className={clsx('relative w-full', containerClassName)}>
+        {children}
+      </div>
     </Component>
-  );
-};
-
-const Container = ({ children, className = '' }: ContainerProps) => {
-  return (
-    <div
-      className={clsx(
-        'relative w-full',
-        className,
-      )}
-    >
-      {children}
-    </div>
   );
 };
