@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { cn } from '@/lib/utils';
 
 type RowProps = {
   children: React.ReactNode;
@@ -16,7 +16,7 @@ export const Row = ({
   return (
     <div
       id={id}
-      className={clsx(
+      className={cn(
         'relative mx-auto w-full px-4 sm:px-6 lg:px-8',
         fullPage && 'min-h-screen',
         className,
