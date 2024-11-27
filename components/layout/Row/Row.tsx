@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils';
 type RowProps = {
   children: React.ReactNode;
   fullPage?: boolean;
+  video?: string;
   className?: string;
   id?: string;
 };
@@ -10,6 +11,7 @@ type RowProps = {
 export const Row = ({
   children,
   fullPage = false,
+  video,
   className = '',
   id,
 }: RowProps) => {
@@ -22,6 +24,16 @@ export const Row = ({
         className,
       )}
     >
+      {video && (
+        <video
+          muted
+          autoPlay
+          loop
+          className="fixed inset-0 -z-30 h-full w-full bg-black object-cover"
+        >
+          <source src={video} type="video/mp4" />
+        </video>
+      )}
       {children}
     </div>
   );
