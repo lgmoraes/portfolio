@@ -3,6 +3,32 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1 {
+    @apply text-4xl font-bold sm:text-5xl lg:text-6xl;
+  }
+  h2 {
+    @apply text-3xl font-semibold sm:text-4xl lg:text-5xl;
+  }
+  h3 {
+    @apply text-2xl font-medium sm:text-3xl lg:text-4xl;
+  }
+  h4 {
+    @apply text-xl font-medium sm:text-2xl lg:text-3xl;
+  }
+  h5 {
+    @apply text-lg font-normal sm:text-xl lg:text-2xl;
+  }
+  h6 {
+    @apply text-base font-normal sm:text-lg lg:text-xl;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -36,7 +62,7 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 213, 100%, 31%;
     --foreground: 210 40% 98%;
 
     --card: 222.2 84% 4.9%;
@@ -66,11 +92,8 @@
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+@layer components {
+}
+
+@layer utilities {
 }
