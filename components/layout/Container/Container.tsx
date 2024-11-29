@@ -18,7 +18,7 @@ export const Container = ({
       id={id}
       role={role}
       className={cn(
-        'relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8',
+        'relative mx-auto w-full max-w-7xl p-4 sm:p-6 lg:p-8',
         className,
       )}
     >
