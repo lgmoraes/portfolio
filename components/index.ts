@@ -6,6 +6,7 @@ export * from "./layout/Container/Container";
 export * from "./layout/Row/Row";
 export * from "./layout/ScreenGrid/ScreenGrid";
 export * from "./layout/Stack/Stack";
+export * from "./navigation/Header/Anchor";
 export * from "./navigation/Header/Header";
 export * from "./sections/Hero/ProfilePicture";
 export * from "./ui/button";
