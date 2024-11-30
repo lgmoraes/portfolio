@@ -15,11 +15,12 @@ export const Header = () => {
     pathname + currentHash === path.replace('#', '');
 
   return (
-    <div className="h-11 shrink-0">
+    <div className="h-14 shrink-0">
       <header
         className={cn(
           montserrat.className,
-          `fixed top-0 z-10 flex h-11 w-full shrink-0 items-center justify-center gap-8 bg-stone-800 uppercase text-stone-200`,
+          `fixed top-0 z-10 flex h-14 w-full shrink-0 items-center justify-center gap-6 bg-stone-800 uppercase text-stone-200`,
+          '[&>a]:flex [&>a]:h-12 [&>a]:items-center [&>a]:px-2 [&>a]:text-lg',
         )}
       >
         <Link
