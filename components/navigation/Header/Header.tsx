@@ -21,44 +21,42 @@ export const Header = () => {
     pathname + currentHash === path.replace('#', '');
 
   return (
-    <div className="h-14 shrink-0">
-      <header
-        className={cn(
-          montserrat.className,
-          `fixed top-0 z-10 flex h-14 w-full shrink-0 items-center justify-center gap-6 bg-stone-800 uppercase text-stone-200`,
-          '[&>a]:flex [&>a]:h-12 [&>a]:items-center [&>a]:px-2 [&>a]:text-lg',
-        )}
+    <header
+      className={cn(
+        montserrat.className,
+        `fixed top-0 z-10 flex h-14 w-full shrink-0 items-center justify-center gap-6 bg-stone-800 uppercase text-stone-200`,
+        '[&>a]:flex [&>a]:h-12 [&>a]:items-center [&>a]:px-2 [&>a]:text-lg',
+      )}
+    >
+      {landingSections.map((section, index) => {
+        return (
+          <Link
+            href={`/#${section.id}`}
+            className={clsx(isActiveHash('/#' + section.id) && 'underline')}
+            key={index}
+            onClick={(e) => {
+              if (pathname !== '/') return;
+
+              e.preventDefault();
+
+              const target = document.getElementById(section.id);
+
+              target?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+              });
+            }}
+          >
+            {section.name}
+          </Link>
+        );
+      })}
+      <Link
+        href="/portfolio"
+        className={clsx(isActive('/portfolio') && 'underline')}
       >
-        {landingSections.map((section, index) => {
-          return (
-            <Link
-              href={`/#${section.id}`}
-              className={clsx(isActiveHash('/#' + section.id) && 'underline')}
-              key={index}
-              onClick={(e) => {
-                if (pathname !== '/') return;
-
-                e.preventDefault();
-
-                const target = document.getElementById(section.id);
-
-                target?.scrollIntoView({
-                  behavior: 'smooth',
-                  block: 'start',
-                });
-              }}
-            >
-              {section.name}
-            </Link>
-          );
-        })}
-        <Link
-          href="/portfolio"
-          className={clsx(isActive('/portfolio') && 'underline')}
-        >
-          Portfolio
-        </Link>
-      </header>
-    </div>
+        Portfolio
+      </Link>
+    </header>
   );
 };

@@ -32,7 +32,7 @@ export default function RootLayout({
       lang="fr"
       className={`${inter.variable} ${montserrat.variable} font-sans`}
     >
-      <body className={`${inter.className} dark flex h-screen flex-col`}>
+      <body className={`${inter.className} dark flex h-screen flex-col pt-14`}>
         <Header />
         <div className="flex grow flex-col">{children}</div>
       </body>
