@@ -7,6 +7,12 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+const landingSections = [
+  { id: 'home', name: 'Home' },
+  { id: 'faq', name: 'FAQ' },
+  { id: 'contact', name: 'Contact' },
+];
+
 export const Header = () => {
   const pathname = usePathname();
   const currentHash = useStore((store) => store.hash);
@@ -23,24 +29,29 @@ export const Header = () => {
           '[&>a]:flex [&>a]:h-12 [&>a]:items-center [&>a]:px-2 [&>a]:text-lg',
         )}
       >
-        <Link
-          href="/#home"
-          className={clsx(isActiveHash('/#home') && 'underline')}
-        >
-          Home
-        </Link>
-        <Link
-          href="/#faq"
-          className={clsx(isActiveHash('/#faq') && 'underline')}
-        >
-          FAQ
-        </Link>
-        <Link
-          href="/#contact"
-          className={clsx(isActiveHash('/#contact') && 'underline')}
-        >
-          Contact
-        </Link>
+        {landingSections.map((section, index) => {
+          return (
+            <Link
+              href={`/#${section.id}`}
+              className={clsx(isActiveHash('/#' + section.id) && 'underline')}
+              key={index}
+              onClick={(e) => {
+                if (pathname !== '/') return;
+
+                e.preventDefault();
+
+                const target = document.getElementById(section.id);
+
+                target?.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start',
+                });
+              }}
+            >
+              {section.name}
+            </Link>
+          );
+        })}
         <Link
           href="/portfolio"
           className={clsx(isActive('/portfolio') && 'underline')}
