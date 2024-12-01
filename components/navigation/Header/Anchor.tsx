@@ -29,5 +29,5 @@ export const Anchor = ({ id }: AnchorProps) => {
     return () => observer.disconnect();
   }, [id, setHash]);
 
-  return <div id={id} data-hash={id}></div>;
+  return <div id={id} data-hash={id} className="scroll-mt-14"></div>;
 };
