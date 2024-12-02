@@ -8,6 +8,7 @@ export * from "./layout/ScreenGrid/ScreenGrid";
 export * from "./layout/Stack/Stack";
 export * from "./navigation/Header/Anchor";
 export * from "./navigation/Header/Header";
+export * from "./sections/Contact/Contact";
 export * from "./sections/Hero/ProfilePicture";
 export * from "./ui/button";
 export * from "./ui/card";
