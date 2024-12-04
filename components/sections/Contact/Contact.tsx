@@ -1,16 +1,14 @@
 'use client';
 
-import {
-  Alert,
-  Button,
-  Card,
-  Container,
-  Input,
-  Label,
-  Textarea,
-} from '@/components/';
+import { Container } from '@/components/layout/Container/Container';
+import { Alert } from '@/components/ui/alert';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import { ContactFormSchema, contactFormSchema } from '@/schemas/contactForm';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { Label } from '@radix-ui/react-label';
 import { useForm } from 'react-hook-form';
 
 const formSchema = contactFormSchema;
