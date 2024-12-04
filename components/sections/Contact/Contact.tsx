@@ -9,29 +9,32 @@ import {
   Label,
   Textarea,
 } from '@/components/';
+import { ContactFormSchema, contactFormSchema } from '@/schemas/contactForm';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-import { z } from 'zod';
 
-const formSchema = z.object({
-  firstName: z.string().min(1, 'Le prénom est obligatoire'),
-  email: z.string().email("L'email est invalide"),
-  message: z
-    .string()
-    .min(10, 'Le message doit contenir au moins 10 caractères'),
-});
-
-type IFormInput = z.infer<typeof formSchema>;
+const formSchema = contactFormSchema;
 
 export const Contact = () => {
-  const { register, handleSubmit, formState } = useForm<IFormInput>({
+  const { register, handleSubmit, formState } = useForm<ContactFormSchema>({
     resolver: zodResolver(formSchema),
   });
 
   const { errors } = formState;
 
-  const onSubmit = (data: IFormInput) => {
-    console.log(data);
+  const onSubmit = async (data: ContactFormSchema) => {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+    if (response.ok) {
+      alert('Email envoyé avec succès!');
+    } else {
+      alert("Erreur lors de l'envoi de l'email.");
+    }
   };
 
   return (
