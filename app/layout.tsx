@@ -1,9 +1,7 @@
-import Header from '@/components/header';
+import { Header } from '@/components/navigation/Header/Header';
 import type { Metadata } from 'next';
-import { Nunito } from 'next/font/google';
+import { Inter, Montserrat } from 'next/font/google';
 import './globals.css';
-
-const nunito = Nunito({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   description: 'Portfolio de Louis Moraes, Developpeur web fullstack',
@@ -12,14 +10,29 @@ export const metadata: Metadata = {
   },
 };
 
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-inter',
+});
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['200'],
+  variable: '--font-montserrat',
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      <body className={`${nunito.className} dark flex h-screen flex-col`}>
+    <html
+      lang="fr"
+      className={`${inter.variable} ${montserrat.variable} font-sans`}
+    >
+      <body className={`${inter.className} flex h-screen flex-col pt-14`}>
         <Header />
         <div className="flex grow flex-col">{children}</div>
       </body>
