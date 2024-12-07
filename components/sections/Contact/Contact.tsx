@@ -37,7 +37,7 @@ export const Contact = () => {
 
   return (
     <Container className="max-w-lg">
-      <h2>Contactez-moi</h2>
+      <h2 className="my-12">Contactez-moi</h2>
       <Card className="mt-20 p-6">
         <form
           className="flex flex-col space-y-4"
