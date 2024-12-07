@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import { PluginAPI } from 'tailwindcss/types/config';
 
 const defaultTheme = require('tailwindcss/defaultTheme');
 
@@ -84,7 +85,22 @@ const config = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [
+    require('tailwindcss-animate'),
+    function ({ addUtilities }: PluginAPI) {
+      addUtilities({
+        '.text-shadow-sm': {
+          textShadow: '0 2px 4px rgba(0, 0, 0, 0.4)',
+        },
+        '.text-shadow': {
+          textShadow: '0 4px 6px rgba(0, 0, 0, 0.45)',
+        },
+        '.text-shadow-lg': {
+          textShadow: '0 6px 8px rgba(0, 0, 0, 0.5)',
+        },
+      });
+    },
+  ],
 } satisfies Config;
 
 export default config;
