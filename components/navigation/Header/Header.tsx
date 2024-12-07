@@ -34,18 +34,6 @@ export const Header = () => {
             href={`/#${section.id}`}
             className={clsx(isActiveHash('/#' + section.id) && 'underline')}
             key={index}
-            onClick={(e) => {
-              if (pathname !== '/') return;
-
-              e.preventDefault();
-
-              const target = document.getElementById(section.id);
-
-              target?.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start',
-              });
-            }}
           >
             {section.name}
           </Link>
