@@ -3,6 +3,8 @@ import { PluginAPI } from 'tailwindcss/types/config';
 
 const defaultTheme = require('tailwindcss/defaultTheme');
 
+const contentHeight = 'calc(100vh - theme(height.header))';
+
 const config = {
   darkMode: ['class'],
   content: [
@@ -28,6 +30,13 @@ const config = {
       fontFamily: {
         sans: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
         title: ['var(--font-montserrat)', ...defaultTheme.fontFamily.sans],
+      },
+      height: {
+        header: '3.5rem',
+        content: contentHeight,
+      },
+      minHeight: {
+        content: contentHeight,
       },
       colors: {
         border: 'hsl(var(--border))',

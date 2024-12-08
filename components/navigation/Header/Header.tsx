@@ -24,7 +24,7 @@ export const Header = () => {
     <header
       className={cn(
         montserrat.className,
-        `fixed top-0 z-10 flex h-14 w-full shrink-0 items-center justify-center gap-6 bg-stone-800 uppercase text-stone-200`,
+        `h-header sticky top-0 z-10 flex w-full shrink-0 items-center justify-center gap-6 bg-stone-800 uppercase text-stone-200`,
         '[&>a]:flex [&>a]:h-12 [&>a]:items-center [&>a]:px-2 [&>a]:text-lg',
       )}
     >

@@ -20,7 +20,7 @@ export const Row = ({
       id={id}
       className={cn(
         'relative mx-auto w-full px-4 sm:px-6 lg:px-8',
-        fullPage && 'min-h-screen',
+        fullPage && 'min-h-content',
         className,
       )}
     >
