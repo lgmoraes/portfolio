@@ -20,6 +20,7 @@ export const Hamburger = ({
   height = '22',
   isOpen = false,
   transitionDuration = '0.3s',
+  onClick,
 }: HamburgerProps) => {
   return (
     <svg
@@ -27,6 +28,7 @@ export const Hamburger = ({
       height={height}
       viewBox={`0 0 24 22`}
       className={cn(defaultColor, className)}
+      onClick={onClick}
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       style={svgStyle}
