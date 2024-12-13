@@ -26,7 +26,6 @@ export const Header = () => {
     pathname + currentHash === path.replace('#', '');
 
   const toggleOpen = () => {
-    console.log(isOpen);
     setIsOpen(!isOpen);
   };
 
@@ -34,15 +33,15 @@ export const Header = () => {
     <header
       className={cn(
         montserrat.className,
-        `sticky top-0 z-50 flex h-header w-full sm:justify-center overflow-hidden bg-stone-800 uppercase text-stone-200 transition-all duration-300`,
-        isOpen && 'justify-start pl-12 sm:pl-0 h-80 sm:h-header ',
+        `sticky top-0 z-50 flex w-full overflow-hidden bg-stone-800 uppercase text-stone-200 transition-all duration-300 sm:justify-center`,
+        isOpen ? 'h-80 justify-start pl-12 sm:h-header sm:pl-0' : 'h-header',
       )}
     >
       {/* List */}
       <div
         className={cn(
           'flex shrink-0 sm:flex-row sm:items-center sm:justify-center sm:gap-6',
-          'h-48 sm:h-header mt-16 flex-col sm:mt-0 justify-between',
+          'mt-16 h-48 flex-col justify-between sm:mt-0 sm:h-header',
         )}
       >
         {landingSections.map((section, index) => {
