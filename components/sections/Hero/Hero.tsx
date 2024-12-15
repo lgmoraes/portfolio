@@ -12,7 +12,7 @@ export const Hero = ({}: {}) => {
       <div className=""></div>
 
       <div className="space-y-12">
-        <div className="flex flex-col gap-1 bg-black/30 p-7 px-0 leading-none backdrop-blur-sm text-shadow-lg sm:p-9 lg:w-fit lg:px-28">
+        <div className="flex flex-col gap-1 bg-black/30 p-7 px-0 leading-none text-shadowHard-sm sm:p-9 sm:backdrop-blur-sm sm:text-shadow-md lg:w-fit lg:px-28">
           <p className="text-4xl tracking-wide sm:text-6xl lg:text-7xl">
             {process.env.NEXT_PUBLIC_SITE_OWNER}
           </p>
@@ -34,14 +34,16 @@ export const Hero = ({}: {}) => {
         </div>
         <Button
           variant="white"
-          className="mx-auto flex h-12 w-64 rounded-none text-base font-bold uppercase tracking-wider shadow sm:text-lg lg:ml-24 lg:w-80 lg:text-xl"
+          className="mx-auto flex h-12 w-64 text-base font-bold uppercase tracking-wider shadow-hard sm:text-lg sm:shadow lg:ml-24 lg:w-80 lg:text-xl"
           asChild
         >
           <Link href="#contact">Contactez-moi</Link>
         </Button>
       </div>
 
-      <p className="mb-12 text-shadow">Défilez vers le bas</p>
+      <p className="mb-12 text-shadowHard-xs sm:text-shadow">
+        Défilez vers le bas
+      </p>
     </section>
   );
 };
