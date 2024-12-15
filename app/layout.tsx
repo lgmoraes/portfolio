@@ -20,6 +20,9 @@ const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['200'],
   variable: '--font-montserrat',
+  display: 'swap',
+  preload: true,
+  fallback: ['system-ui'],
 });
 
 export default function RootLayout({
