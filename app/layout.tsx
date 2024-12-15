@@ -12,8 +12,11 @@ export const metadata: Metadata = {
 
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '700'],
   variable: '--font-inter',
+  display: 'swap',
+  preload: true,
+  fallback: ['system-ui'],
 });
 
 const montserrat = Montserrat({
