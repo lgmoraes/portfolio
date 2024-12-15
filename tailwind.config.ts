@@ -78,6 +78,11 @@ const config = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      boxShadow: {
+        'hard-sm': '0 1px rgba(0, 0, 0, 0.1)',
+        hard: '0 2px rgba(0, 0, 0, 0.1)',
+        'hard-md': '0 4px rgba(0, 0, 0, 0.1)',
+      },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
@@ -98,14 +103,29 @@ const config = {
     require('tailwindcss-animate'),
     function ({ addUtilities }: PluginAPI) {
       addUtilities({
+        '.text-shadow-xs': {
+          textShadow: '0 1px 1px rgba(0, 0, 0, 0.4)',
+        },
         '.text-shadow-sm': {
           textShadow: '0 2px 2px rgba(0, 0, 0, 0.4)',
         },
         '.text-shadow': {
           textShadow: '0 4px 4px rgba(0, 0, 0, 0.4)',
         },
-        '.text-shadow-lg': {
+        '.text-shadow-md': {
           textShadow: '0 6px 6px rgba(0, 0, 0, 0.4)',
+        },
+        '.text-shadow-lg': {
+          textShadow: '0 10px 10px rgba(0, 0, 0, 0.4)',
+        },
+        '.text-shadowHard-xs': {
+          textShadow: '0 1px rgba(0, 0, 0, 0.2)',
+        },
+        '.text-shadowHard-sm': {
+          textShadow: '0 2px rgba(0, 0, 0, 0.2)',
+        },
+        '.text-shadowHard': {
+          textShadow: '0 3px rgba(0, 0, 0, 0.2)',
         },
       });
     },
