@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import company from '@/data/company.json';
 import Link from 'next/link';
 
 export const Hero = ({}: {}) => {
@@ -14,7 +15,7 @@ export const Hero = ({}: {}) => {
       <div className="space-y-12">
         <div className="flex flex-col gap-1 bg-black/30 p-7 px-0 leading-none text-shadowHard-sm sm:p-9 sm:backdrop-blur-sm sm:text-shadow-md lg:w-fit lg:px-28">
           <p className="text-4xl tracking-wide sm:text-6xl lg:text-7xl">
-            {process.env.NEXT_PUBLIC_SITE_OWNER}
+            {company.owner}
           </p>
           <hr className="m-auto my-4 w-44 border sm:w-60 lg:w-1/2" />
           <div className="space-y-1">

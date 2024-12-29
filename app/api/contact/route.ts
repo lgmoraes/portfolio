@@ -1,3 +1,4 @@
+import company from '@/data/company.json';
 import { contactFormSchema } from '@/schemas/contactForm';
 import escape from 'escape-html';
 import { NextResponse } from 'next/server';
@@ -25,12 +26,7 @@ const handleError = (error: unknown) => {
 export const POST = async (req: Request) => {
   try {
     // 1. Validation des variables d'environnement
-    if (
-      !process.env.OVH_EMAIL ||
-      !process.env.OVH_PASSWORD ||
-      !process.env.NEXT_PUBLIC_SITE_NAME ||
-      !process.env.NEXT_PUBLIC_SITE_OWNER
-    ) {
+    if (!process.env.OVH_EMAIL || !process.env.OVH_PASSWORD) {
       throw new Error("Variables d'environnement manquantes");
     }
 
@@ -66,7 +62,7 @@ export const POST = async (req: Request) => {
     // 5. Construction du message
     const emailContent = {
       from: {
-        name: process.env.NEXT_PUBLIC_SITE_OWNER,
+        name: company.owner,
         address: process.env.OVH_EMAIL,
       },
       to: process.env.OVH_EMAIL,
