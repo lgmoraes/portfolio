@@ -1,0 +1,13 @@
+{
+  "name": "Lmoraes.fr",
+  "siteName": "Lmoraes.fr",
+  "owner": "Louis Moraes",
+  "addresses": [
+    {
+      "id": "1",
+      "street": "93 Rue Cuvier",
+      "city": "Tourcoing",
+      "postalCode": "59200"
+    }
+  ]
+}
