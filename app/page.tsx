@@ -9,8 +9,7 @@ export const metadata: Metadata = {
   title: 'Présentation - Louis Moraes',
 };
 
-const video1 =
-  process.env.NEXT_PUBLIC_FILES_URL + 'videos/vaguelettes-bleus.mp4';
+const video1 = process.env.NEXT_PUBLIC_FILES_URL + 'videos/blue_waves';
 
 export default function Home() {
   return (

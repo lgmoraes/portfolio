@@ -28,10 +28,14 @@ export const Row = ({
         <video
           muted
           autoPlay
+          playsInline
           loop
+          poster={video + '.webp'}
+          preload="auto"
           className="fixed inset-0 -z-30 h-full w-full bg-black object-cover"
         >
-          <source src={video} type="video/mp4" />
+          <source src={video + '.webm'} type="video/webm" />
+          <source src={video + '.mp4'} type="video/mp4" />
         </video>
       )}
       {children}
