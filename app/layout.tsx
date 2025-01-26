@@ -1,3 +1,4 @@
+import { Footer } from '@/components/navigation/Footer/Footer';
 import { Header } from '@/components/navigation/Header/Header';
 import type { Metadata } from 'next';
 import { Inter, Montserrat } from 'next/font/google';
@@ -41,6 +42,7 @@ export default function RootLayout({
       <body className={`${inter.className} flex min-h-screen flex-col`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
