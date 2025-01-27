@@ -1,13 +1,14 @@
 'use client';
 
 import useStore from '@/lib/store';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 type AnchorProps = {
   id: string;
+  children?: React.ReactNode;
 };
 
-export const Anchor = ({ id }: AnchorProps) => {
+export const Anchor = ({ id, children }: AnchorProps) => {
   const setHash = useStore((store) => store.setHash);
 
   useEffect(() => {
@@ -19,7 +20,7 @@ export const Anchor = ({ id }: AnchorProps) => {
           setHash(anchor.target.id);
         }
       },
-      { threshold: 0.5 },
+      { threshold: 0.6 },
     );
 
     const tag = document.querySelector(`div[data-hash=${id}]`);
@@ -29,5 +30,9 @@ export const Anchor = ({ id }: AnchorProps) => {
     return () => observer.disconnect();
   }, [id, setHash]);
 
-  return <div id={id} data-hash={id} className="scroll-mt-14"></div>;
+  return (
+    <div id={id} data-hash={id} className="scroll-mt-14">
+      {children}
+    </div>
+  );
 };
