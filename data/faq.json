@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Quelle est votre expérience en développement ?",
+    "answer": "Avec 7 ans d’expérience en développement sur divers projets et technologies, je me suis spécialisé dans Next.js et Shopify Headless. Mon expertise couvre la création de sites performants, optimisés pour le SEO et offrant une expérience utilisateur fluide. Je conçois des solutions sur mesure en intégrant des API et en optimisant les performances afin de garantir un site rapide, évolutif et adapté aux besoins spécifiques de votre entreprise."
+  },
+  {
+    "question": "Pourquoi utiliser Shopify ?",
+    "answer": "Shopify est la solution n°1 pour le e-commerce. Elle permet de lancer une boutique en ligne rapidement, sans se soucier des aspects techniques tels que l'hébergement, la sécurité ou les mises à jour. Son modèle économique est aussi intéressant : la commission sur les ventes reste raisonnable par rapport à d'autres solutions."
+  },
+  {
+    "question": "Pourquoi utiliser un front Headless plutôt que l'interface de base de Shopify ?",
+    "answer": "L'interface standard de Shopify, bien que fonctionnelle, est limitée en termes de personnalisation et de performance. Pour un site sur mesure, une architecture Headless avec Next.js offre des performances exceptionnelles et une liberté totale sur le design et les fonctionnalités. Cette approche garantit un chargement plus rapide, une meilleure optimisation SEO et une expérience utilisateur fluide, tout en permettant une évolutivité optimale avec un coût d’infrastructure maîtrisé."
+  },
+  {
+    "question": "Le site peut-il fonctionner sans intervention technique ?",
+    "answer": "Oui, votre site pourra fonctionner avec un minimum d'intervention technique. Grâce à une infrastructure optimisée combinant Vercel pour l’hébergement du front-end, Shopify pour la gestion e-commerce et Supabase si nécessaire pour le stockage de données spécifiques, votre site sera autonome. Vous pourrez également gérer le contenu en toute simplicité grâce à Sanity, sans avoir besoin de compétences techniques avancées."
+  },
+  {
+    "question": "Quels seront les coûts d'infrastructure liés à mon site ?",
+    "answer": "L'utilisation de plateformes as a service (PaaS) que je propose est une solution idéale pour la plupart des projets, car les coûts sont faibles et la charge de visiteurs est généralement modérée au démarrage. Si votre site rencontre un fort succès, les coûts d’infrastructure évolueront progressivement. Un administrateur système ne devient réellement nécessaire que si votre site dépasse plusieurs millions de visiteurs mensuels ou requiert des optimisations avancées pour maîtriser les coûts et garantir des performances élevées."
+  }
+]
