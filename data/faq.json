@@ -9,7 +9,7 @@
   },
   {
     "question": "Pourquoi utiliser un front Headless plutôt que l'interface de base de Shopify ?",
-    "answer": "L'interface standard de Shopify, bien que fonctionnelle, est limitée en termes de personnalisation et de performance. Pour un site sur mesure, une architecture Headless avec Next.js offre des performances exceptionnelles et une liberté totale sur le design et les fonctionnalités. Cette approche garantit un chargement plus rapide, une meilleure optimisation SEO et une expérience utilisateur fluide, tout en permettant une évolutivité optimale avec un coût d’infrastructure maîtrisé."
+    "answer": "L'interface standard de Shopify, est limitée en termes de personnalisation et de performance. Pour un site sur mesure, une architecture Headless avec Next.js offre des performances exceptionnelles et une liberté totale sur le design et les fonctionnalités. Cette approche garantit un chargement plus rapide, une meilleure optimisation SEO et une expérience utilisateur fluide, tout en permettant une évolutivité optimale avec un coût d’infrastructure maîtrisé."
   },
   {
     "question": "Le site peut-il fonctionner sans intervention technique ?",

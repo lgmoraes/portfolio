@@ -1,6 +1,7 @@
 import { Row } from '@/components/layout/Row/Row';
 import { Anchor } from '@/components/navigation/Header/Anchor';
 import { Contact } from '@/components/sections/Contact/Contact';
+import { FAQ } from '@/components/sections/FAQ/FAQ';
 import { Hero } from '@/components/sections/Hero/Hero';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
@@ -21,8 +22,8 @@ export default function Home() {
       </Anchor>
 
       <Anchor id="faq">
-        <Row fullPage className="bg-slate-50">
-          FAQ
+        <Row fullPage className="bg-slate-700">
+          <FAQ />
         </Row>
       </Anchor>
 
