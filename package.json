@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev --turbopack",
+    "dev": "next dev --turbo",
     "lint": "next lint",
     "start": "next start"
   },
@@ -14,6 +14,7 @@
     "@radix-ui/react-label": "^2.1.1",
     "@radix-ui/react-select": "^2.1.5",
     "@radix-ui/react-slot": "^1.1.1",
+    "@sentry/nextjs": "8",
     "@vercel/speed-insights": "^1.1.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
