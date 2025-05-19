@@ -3,7 +3,6 @@ import { Anchor } from '@/components/navigation/Header/Anchor';
 import { Contact } from '@/components/sections/Contact/Contact';
 import { FAQ } from '@/components/sections/FAQ/FAQ';
 import { Hero } from '@/components/sections/Hero/Hero';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -32,8 +31,6 @@ export default function Home() {
           <Contact />
         </Row>
       </Anchor>
-
-      <SpeedInsights />
     </main>
   );
 }
