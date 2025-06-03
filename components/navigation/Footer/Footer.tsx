@@ -1,7 +1,7 @@
 import { Container } from '@/components/layout/Container/Container';
 import { Row } from '@/components/layout/Row/Row';
 import { Button } from '@/components/ui/button';
-import Link from 'next/dist/client/link';
+import Link from 'next/link';
 
 const year = new Date().getFullYear();
 const navigationLinks = {
