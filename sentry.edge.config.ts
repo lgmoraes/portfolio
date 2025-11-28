@@ -3,10 +3,11 @@
 // Note that this config is unrelated to the Vercel Edge Runtime and is also required when running locally.
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
-import * as Sentry from '@sentry/nextjs';
+import * as Sentry from "@sentry/nextjs";
+import { SENTRY_DSN } from "./infra/config/env-client";
 
 Sentry.init({
-  dsn: process.env.SENTRY_DSN,
+  dsn: SENTRY_DSN,
 
   // Define how likely traces are sampled. Adjust this value in production, or use tracesSampler for greater control.
   tracesSampleRate: 1,
@@ -23,8 +24,8 @@ Sentry.init({
     }
     // Supprimer les adresses IP
     if (event.request && event.request.headers) {
-      delete event.request.headers['X-Forwarded-For'];
-      delete event.request.headers['REMOTE_ADDR'];
+      delete event.request.headers["X-Forwarded-For"];
+      delete event.request.headers["REMOTE_ADDR"];
     }
     if (event.contexts && event.contexts.device) {
       delete event.contexts.device.ip_address;
