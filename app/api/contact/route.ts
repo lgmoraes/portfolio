@@ -36,6 +36,12 @@ export const POST = async (req: Request) => {
     const body = await req.json();
     const data = contactFormSchema.parse(body) as ContactFormData;
 
+    if (data.message.split(" ").length < 3) {
+      // Simple check for very short messages
+      console.warn("SPAM - Message trop court détecté: ", data.message);
+      return NextResponse.json({});
+    }
+
     // Configuration de Nodemailer
     const transporter = nodemailer.createTransport({
       host: EMAIL_HOST,
