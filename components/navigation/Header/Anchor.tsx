@@ -1,7 +1,8 @@
-'use client';
+"use client";
 
-import useStore from '@/lib/store';
-import React, { useEffect } from 'react';
+import type React from "react";
+import { useEffect } from "react";
+import useStore from "@/infra/store/store";
 
 type AnchorProps = {
   id: string;

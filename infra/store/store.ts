@@ -1,4 +1,4 @@
-import { create } from 'zustand';
+import { create } from "zustand";
 
 type StoreState = {
   hash: string;
@@ -6,7 +6,7 @@ type StoreState = {
 };
 
 const useStore = create<StoreState>((set) => ({
-  hash: '',
+  hash: "",
   setHash: (newSection) => set(() => ({ hash: newSection })),
 }));
 
