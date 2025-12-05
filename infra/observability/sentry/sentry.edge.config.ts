@@ -1,9 +1,10 @@
-// This file configures the initialization of Sentry on the server.
-// The config you add here will be used whenever the server handles a request.
+// This file configures the initialization of Sentry for edge features (middleware, edge routes, and so on).
+// The config you add here will be used whenever one of the edge features is loaded.
+// Note that this config is unrelated to the Vercel Edge Runtime and is also required when running locally.
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
 import * as Sentry from "@sentry/nextjs";
-import { SENTRY_DSN } from "./infra/config/env-client";
+import { SENTRY_DSN } from "@/infra/config/env-client";
 
 Sentry.init({
   dsn: SENTRY_DSN,
@@ -22,11 +23,11 @@ Sentry.init({
       event.user = undefined;
     }
     // Supprimer les adresses IP
-    if (event.request && event.request.headers) {
+    if (event.request?.headers) {
       delete event.request.headers["X-Forwarded-For"];
-      delete event.request.headers["REMOTE_ADDR"];
+      delete event.request.headers.REMOTE_ADDR;
     }
-    if (event.contexts && event.contexts.device) {
+    if (event.contexts?.device) {
       delete event.contexts.device.ip_address;
     }
     return event;
